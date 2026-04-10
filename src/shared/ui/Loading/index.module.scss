@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #0b1012;
+  background-image:
+    linear-gradient(#0b1012 60%, transparent 100%),
+    radial-gradient(#83e6f71d 1px, transparent 1px),
+    radial-gradient(#83e6f71d 1px, transparent 1px);
+  background-position:
+    0 0,
+    0 0,
+    calc(20px / 2) calc(20px / 2);
+  background-size:
+    100% 100%,
+    20px 20px,
+    20px 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f08;
+  will-change: transform;
+}

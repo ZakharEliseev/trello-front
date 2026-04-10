@@ -1,0 +1,10 @@
+@use "~/styles/mixins" as globalMixins;
+
+.inputTitle {
+  @include globalMixins.input(
+    $padding: 5px,
+    $maxHeight: 185px,
+    $minHeight: 30px,
+    $borderRadius: 8px
+  );
+}

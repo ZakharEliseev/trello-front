@@ -1,0 +1,22 @@
+.from {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.input:hover {
+  box-shadow: 0 0 0 1px #9cb8ff;
+  transition: box-shadow 0.3s ease;
+}
+
+.btn {
+  background-color: #669df1;
+  color: #1f1f21;
+
+  &:hover {
+    background-color: #90b8f6 !important;
+    box-shadow: 0 0 0 1px #9cb8ff;
+    color: #1f1f21 !important;
+    transition: box-shadow 0.3s ease;
+  }
+}

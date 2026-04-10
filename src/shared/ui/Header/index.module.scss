@@ -1,0 +1,38 @@
+@use "~/styles/mixins" as globalMixins;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+  max-height: 48px;
+  background-color: #1f1f21;
+  color: #aaabaf;
+  overflow: hidden;
+}
+
+.boardsImg {
+  font-size: 28px;
+}
+
+.searchImg {
+  font-size: 28px;
+}
+
+.logoutIcon {
+  @include globalMixins.iconHoverEffect;
+}
+
+.navItems {
+  display: flex;
+  padding: 10px;
+  gap: 14px;
+}
+
+.link {
+  @include globalMixins.headerIcons;
+}
+
+.motionWrapper {
+  width: 100%;
+}

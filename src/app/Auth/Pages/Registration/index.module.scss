@@ -1,0 +1,4 @@
+@use "~/styles/Auth/mixins.scss";
+
+@include mixins.auth;
+@include mixins.authBtn;

@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "ignoreDeprecations": "6.0",
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@app/*": ["src/app/*"],
+      "@components": ["src/shared/components/index.ts"],
+      "@components/*": ["src/shared/components/*"],
+      "@services": ["src/shared/services/index.ts"],
+      "@services/*": ["src/shared/services/*"],
+      "@hooks": ["src/shared/hooks/index.ts"],
+      "@hooks/*": ["src/shared/hooks/*"],
+      "@model": ["src/shared/model/index.ts"],
+      "@model/*": ["src/shared/model/*"],
+      "@utils": ["src/shared/utils/index.ts"],
+      "@utils/*": ["src/shared/utils/*"],
+      "@lib": ["src/shared/lib/index.ts"],
+      "@lib/*": ["src/shared/lib/*"],
+      "@routes": ["src/shared/routes/index.ts"],
+      "@routes/*": ["src/shared/routes/*"],
+      "@styles/*": ["src/shared/styles/*"],
+      "@icons/*": ["src/shared/icons/*"],
+      "@store": ["src/shared/store/index.ts"],
+      "@api": ["src/shared/api/index.ts"],
+      "@constants": ["src/shared/constants/index.ts"]
+    }
+  },
+  "include": ["src"]
+}

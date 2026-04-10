@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  background-color: #0000003d;
+  gap: 20px;
+}
+
+.title {
+  max-width: 220px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    border-radius: 2px;
+    background-color: #7c6ca9;
+    box-shadow: 0 0 0 8px #7c6ca9;
+    transition: box-shadow 0.2s ease;
+  }
+}

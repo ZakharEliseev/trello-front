@@ -1,0 +1,16 @@
+.tableTitle {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: #24252836;
+  gap: 10px;
+}

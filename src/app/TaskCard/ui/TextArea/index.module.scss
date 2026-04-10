@@ -1,0 +1,20 @@
+@use "~/styles/mixins" as globalMixins;
+
+.inputTitle {
+  @include globalMixins.input(
+    $padding: 5px,
+    $maxHeight: 185px,
+    $minHeight: 48px,
+    $borderRadius: 12px
+  );
+  line-height: 1.5;
+}
+
+.inputTitle:focus {
+  border-color: #90b9f600;
+  background-color: #242528;
+  box-shadow: 0 0 0 2px #9cb8ff;
+  opacity: 0.9;
+  font-size: 16px;
+  color: #fff;
+}

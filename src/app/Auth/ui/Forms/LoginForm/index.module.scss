@@ -1,0 +1,37 @@
+@use "~/styles/Auth/mixins";
+
+@include mixins.authForm;
+
+.remember {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #172b4d;
+}
+
+.tooltipIcon {
+  border-radius: 50%;
+  background-color: rgb(130 112 219);
+  font-size: 24px;
+  color: white;
+}
+
+.tooltip {
+  max-width: 700px;
+}
+
+.tooltip {
+  :global {
+    .ant-tooltip-container {
+      background-color: #fff;
+      text-align: left;
+      color: #172b4d;
+      white-space: normal;
+    }
+
+    .ant-tooltip-arrow::before {
+      background-color: #172b4d;
+    }
+  }
+}

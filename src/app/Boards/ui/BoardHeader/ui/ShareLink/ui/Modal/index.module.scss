@@ -1,0 +1,56 @@
+.modal {
+  :global {
+    .ant-modal-container {
+      background-color: #222224;
+    }
+
+    .ant-modal-container:hover {
+      box-shadow: 0 0 0 2px #9cb8ff;
+      transition: box-shadow 0.4s ease;
+    }
+
+    .ant-modal-title {
+      color: white;
+    }
+
+    .ant-modal-body {
+      color: white;
+    }
+
+    .ant-typography-copy {
+      font-size: 18px;
+    }
+  }
+}
+
+.okModalButton {
+  background-color: #669df1;
+  color: #1f1f21;
+}
+
+.okModalButton:hover {
+  background-color: #90b8f6 !important;
+  box-shadow: 0 0 0 1px #9cb8ff;
+  color: #1f1f21 !important;
+  transition: box-shadow 0.3s ease;
+}
+
+.closeModalIcon {
+  color: #fff;
+}
+
+.closeModalIcon:hover {
+  border-radius: 2px;
+  background-color: #131314;
+  box-shadow: 0 0 0 6px #131314;
+  transition: box-shadow 0.3s ease;
+}
+
+.shareHashModalLink {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+  line-height: 2;
+  color: #fff;
+  gap: 10px;
+}

@@ -1,0 +1,22 @@
+@use "~/styles/mixins" as globalMixins;
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  height: 27px;
+  font-size: 14px;
+  color: #aaabaf;
+  @include globalMixins.iconHoverEffect;
+}
+
+.logoutIcon {
+  font-size: 28px;
+  @include globalMixins.headerIcons;
+}

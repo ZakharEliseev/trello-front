@@ -1,0 +1,126 @@
+@mixin auth {
+  .main {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(250 251 252);
+    background-image:
+      url("~/icons/auth_right.svg"), url("~/icons/auth_left.svg");
+    background-position:
+      left bottom,
+      right bottom;
+    background-size: 368px, 368px;
+    background-repeat: no-repeat;
+    background-attachment: fixed, fixed;
+
+    @media (max-width: 1200px) {
+      background-size: calc(-232px + 50vw), calc(-232px + 50vw), cover;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+  }
+
+  .anotherAuth {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    &::before {
+      display: block;
+      margin: 16px 0;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      color: #5e6c84;
+      content: "Или продолжить с помощью:";
+    }
+  }
+}
+
+@mixin authBtn {
+  .authBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(193 199 208);
+    border-radius: 3px;
+    background: rgb(255 255 255);
+    font-weight: 700;
+    color: #172b4d;
+    cursor: pointer;
+    column-gap: 10px;
+  }
+
+  .authBtn:hover {
+    background-color: #5e6c840b;
+  }
+}
+
+@mixin authCard {
+  .authCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    padding: 32px 40px;
+    background: rgb(255 255 255);
+    box-shadow: rgb(0 0 0 / 10%) 0 0 10px;
+    gap: 10px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .trelloIcon {
+    display: flex;
+    justify-content: center;
+    width: 143px;
+    height: 40px;
+  }
+
+  .invite {
+    padding-top: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #172b4d;
+  }
+}
+
+@mixin authForm {
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .input {
+    width: 320px;
+    height: 40px;
+    border-radius: 3px;
+  }
+
+  .label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #44546f;
+  }
+
+  .btn {
+    width: 320px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 3px;
+  }
+}

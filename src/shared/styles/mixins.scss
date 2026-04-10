@@ -1,0 +1,47 @@
+@mixin iconHoverEffect {
+  &:hover {
+    border-radius: 2px;
+    background-color: #37373a;
+    box-shadow: 0 0 0 4px #37373a;
+  }
+}
+
+@mixin input(
+  $padding: null,
+  $maxHeight: null,
+  $minHeight: null,
+  $borderRadius: null
+) {
+  @if $padding {
+    padding: $padding;
+  }
+
+  @if $maxHeight {
+    max-height: $maxHeight;
+  }
+
+  @if $minHeight {
+    min-height: $minHeight;
+  }
+
+  @if $borderRadius {
+    border-radius: $borderRadius;
+  }
+  width: 100%;
+  border: none;
+  background-color: #242528;
+  font-size: 16px;
+  color: #cecfd2;
+  outline: none;
+  resize: none;
+}
+
+@mixin headerIcons {
+  cursor: pointer;
+  color: #aaabaf;
+  &:hover {
+    border-radius: 2px;
+    background-color: #37373a;
+    box-shadow: 0 0 0 5px #37373a;
+  }
+}

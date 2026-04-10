@@ -1,0 +1,27 @@
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("~/icons/bg_board.svg");
+  overflow: visible;
+}
+
+.tables {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 60%;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.deleteBoardWrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.deleteBoard {
+  font-size: 60px;
+  color: white;
+}

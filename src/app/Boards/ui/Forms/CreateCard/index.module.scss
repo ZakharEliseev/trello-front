@@ -1,0 +1,21 @@
+.createCard {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.btn {
+  background-color: #fff;
+
+  &:hover {
+    box-shadow: 0 0 0 2px #9cb8ff;
+    color: #1f1f21 !important;
+    transition: box-shadow 0.3s ease;
+  }
+}
+
+.input:hover {
+  box-shadow: 0 0 0 1px #9cb8ff;
+  transition: box-shadow 0.3s ease;
+}
