@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Tooltip } from "antd";
 
@@ -19,6 +19,9 @@ interface Props {
 
 const BoardHeader = ({ title, boardId, shareHash, author_id }: Props) => {
   const [tempTitle, setTempTitle] = useState<string>(title);
+  useEffect(() => {
+    setTempTitle(title);
+  }, [tempTitle]);
   const [isEditingTitle, setIsEditingTitle] = useState<boolean>(false);
 
   const currentUser = useAppSelector((state) => state.profile.profile);
