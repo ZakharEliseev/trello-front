@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const apiService = createApi({
   reducerPath: "apiService",
-  tagTypes: ["Boards", "Profile", "Cards"],
+  tagTypes: ["Boards", "Profile", "Cards", "BoardHash"],
   baseQuery: fetchBaseQuery({
     baseUrl: "/api/v1",
     prepareHeaders: (headers) => {

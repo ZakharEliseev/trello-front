@@ -38,13 +38,9 @@ export const boardsApi = apiService.injectEndpoints({
         url: `/boards/shared/${shareHash}`,
         method: "GET",
       }),
-      providesTags: (result) =>
-        result
-          ? [
-              { type: "Boards", id: result.id },
-              { type: "Cards", id: result.id },
-            ]
-          : ["Boards"],
+      providesTags: (result, error, { shareHash }) => [
+        { type: "BoardHash", id: shareHash },
+      ],
     }),
     createBoard: builder.mutation<CreateBoardResponse, CreateBoardRequest>({
       query: (body) => ({
@@ -67,7 +63,7 @@ export const boardsApi = apiService.injectEndpoints({
         method: "PATCH",
         body: { title },
       }),
-      invalidatesTags: ["Boards"],
+      invalidatesTags: (result, error, { id }) => [{ type: "Boards", id }],
     }),
     shareLink: builder.mutation<Board, ShareLinkResponse>({
       query: ({ id, shareHash }) => ({
@@ -75,7 +71,9 @@ export const boardsApi = apiService.injectEndpoints({
         method: "PATCH",
         body: { shareHash },
       }),
-      invalidatesTags: ["Boards"],
+      invalidatesTags: (result, error, { id }) => [
+        { type: "Boards", id }, // только эту доску
+      ],
     }),
     orderBoards: builder.mutation<void, OrderBoardsList>({
       query: (payload) => ({

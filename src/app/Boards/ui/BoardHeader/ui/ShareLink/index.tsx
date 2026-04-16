@@ -28,6 +28,7 @@ const ShareLink = ({ boardId, shareHash }: Props) => {
       shareHash: hashedLink(),
     });
   };
+
   const handleDeleteShareLink = async () => {
     await shareLink({ id: boardId, shareHash: null });
   };
