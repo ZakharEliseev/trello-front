@@ -71,9 +71,7 @@ export const boardsApi = apiService.injectEndpoints({
         method: "PATCH",
         body: { shareHash },
       }),
-      invalidatesTags: (result, error, { id }) => [
-        { type: "Boards", id }, // только эту доску
-      ],
+      invalidatesTags: (result, error, { id }) => [{ type: "Boards", id }],
     }),
     orderBoards: builder.mutation<void, OrderBoardsList>({
       query: (payload) => ({
