@@ -21,7 +21,7 @@ const BoardHeader = ({ title, boardId, shareHash, author_id }: Props) => {
   const [tempTitle, setTempTitle] = useState<string>(title);
   useEffect(() => {
     setTempTitle(title);
-  }, [tempTitle]);
+  }, [title]);
   const [isEditingTitle, setIsEditingTitle] = useState<boolean>(false);
 
   const currentUser = useAppSelector((state) => state.profile.profile);
